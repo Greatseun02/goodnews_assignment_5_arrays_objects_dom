@@ -3,11 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/product.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div class=".container">
+        <header>
+          <h1 class="header">Mini Product Listing App</h1>
+        </header>
+        <main>
+          <section id="product-listing">
+            <h2>Available Products</h2>
+            <div class="product-listing-container">
+              <div id="product-list">
+                <div class="product-card">
+                  <h3>Wireless Mouse</h3>
+                  <p>Price: $15.99</p>
+                  <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                  <h3>USB Keyboard</h3>
+                  <p>Price: $25.49</p>
+                  <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                  <h3>HD Monitor</h3>
+                  <p>Price: $120.00</p>
+                  <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                  <h3>Laptop Stand</h3>
+                  <p>Price: $34.99</p>
+                  <button>Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="cart">
+            <h2>Cart</h2>
+            <div id="cart-items">
+              
+            </div>
+            <div id="cart-total">
+              <p>Total Quantity: <span id="total-quantity">0</span></p>
+              <p>Total: $<span id="total-amount">0.00</span></p>
+            </div>
+            <button id="checkout-button">Clear Cart</button>
+          </section>
+        </main>
+      </div>
+    </div>
     <script type="module" src="/src/product.ts"></script>
   </body>
 </html>
