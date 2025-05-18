@@ -70,15 +70,46 @@
 .cart-container{
     max-width: 720px;
     margin: 40px auto 0;
-    padding: 40px 14px 20px;
+    padding: 20px 14px 20px;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-#card h2{
+#cart h2{
     font-size: 18px;
     text-align: center;
+    margin-bottom: 16px;
+}
+
+
+#cart p, #cart li{
+    font-size: 14px;
+}
+
+#cart ul{
+    margin-bottom: 16px;
+    display: grid;
+    gap: 10px;
+    list-style-position:inside;
+    padding-left: 10px;
+}
+
+#cart #cart-total{
+    margin-bottom: 20px;
+    display: grid;
+    gap: 10px;
+    font-weight:500;
+}
+
+#cart button{
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
 }
 
 @media (max-width:540px) {
