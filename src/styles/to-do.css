@@ -1,0 +1,62 @@
+body { font-family: Arial, sans-serif; margin: 2em; }
+        #todoContainer { max-width: 500px; margin: auto; }
+        .task { display: flex; align-items: center; margin-bottom: 0.5em; }
+        .task.completed span { text-decoration: line-through; color: #888; }
+        .category { font-size: 0.9em; color: #555; margin-left: 1em; }
+        button { margin-left: 0.5em; }
+        h1 { text-align: center; }
+        #taskForm input[type="text"],
+        #taskForm select {
+            font-size: 1em;
+            padding: 0.5em;
+            min-width: 160px;
+        }
+        #taskForm {
+            display: flex;
+            flex-direction: row;      /* Ensure items are in a row */
+            flex-wrap: nowrap;        /* Prevent wrapping to next line */
+            gap: 1em;                 /* Space between items */
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+        #taskList {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            list-style: none;
+        }
+        #taskList li {
+            width: 100%;
+            max-width: 500px;
+            background: #fff;
+            margin-bottom: 1em;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 1em 1.5em;
+            display: flex;
+            flex-direction: row;      /* Make each task a row */
+            align-items: center;
+            gap: 1em;
+            box-sizing: border-box;
+        }
+        .task > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .category {
+            font-size: 0.95em;
+            color: #555;
+            margin-top: 0.3em;
+            margin-left: 0;
+        }
+        .task.completed span {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .task button {
+            margin-left: 0.5em;
+            min-width: 60px;
+        }
