@@ -8,10 +8,19 @@ button.forEach((btn)=>{
         alerts.forEach((alert)=>{
             if(btn.classList.contains("success") && alert.id ==="success"){
                 alert.classList.remove("hidden");
+                setTimeout(()=>{
+                    alert.classList.add("hidden");
+                }, 3000)
             }else if(btn.classList.contains("error") && alert.id ==="error"){
                 alert.classList.remove("hidden");
+                setTimeout(()=>{
+                    alert.classList.add("hidden");
+                }, 3000)
             }else if(btn.classList.contains("warning") && alert.id ==="warning"){
                 alert.classList.remove("hidden");
+                setTimeout(()=>{
+                    alert.classList.add("hidden");
+                }, 3000)
             }
         })
         
