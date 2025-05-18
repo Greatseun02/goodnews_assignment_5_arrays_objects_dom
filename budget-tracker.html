@@ -1,15 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/src/styles/style.css" />
-    <link rel="stylesheet" href="/src/styles/budget.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/budget.ts"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Budget Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        #budgetContainer { max-width: 600px; margin: auto; }
+        table {
+        width: 120%;
+        border-collapse: collapse;
+        margin-top: 1em;
+        }
+        td {
+        border: 1px solid #ddd;
+        padding: 0.5em;
+        text-align: left;
+        word-break: break-word;
+        }
+        #summary { margin: 1em 0; font-weight: bold; display: flex; flex-direction: column; gap: 0.95em }
+        .positive { color: green; }
+        .negative { color: red; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1em; }
+        th, td { border: 1px solid #ddd; padding: 0.5em; text-align: left; }
+        th { background: #f0f0f0; }
+
+        /* Add these styles for the form */
+        #entryForm {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75em;
+            align-items: stretch;
+            margin-bottom: 1em;
+        }
+        #entryForm input,
+        #entryForm select,
+        #entryForm button {
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1em;
+            padding: 0.5em;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Make the entire Balance line bigger */
+        #summary div:last-child {
+            font-size: 1.3em;
+        }
+        #balance {
+            font-size: 1em;
+        }
+       
+        .income-text { color: green; }
+        .expense-text { color: red; }
+
+        td:last-child, th:last-child {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1> Simple Budget Tracker</h1>
+    <div id="budgetContainer">
+        <form id="entryForm">
+            <input type="text" id="descInput" placeholder="Description" required>
+            <input type="number" id="amountInput" placeholder="Amount" required>
+            <select id="typeInput">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button type="submit">Add Entry</button>
+        </form>
+        <table>
+            <tbody id="entries"></tbody>
+        </table>
+        <div id="summary">
+            <div>Total Income: <span id="totalIncome">0</span></div>
+            <div>Total Expenses: <span id="totalExpenses">0</span></div>
+            <div>Balance: <span id="balance" class="positive">0</span></div>
+        </div>
+    </div>
+    <script src="/src/budget.ts"></script>
+</body>
 </html>
