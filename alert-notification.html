@@ -5,12 +5,33 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/src/styles/style.css" />
     <link rel="stylesheet" href="/src/styles/alert.css" />
+    <script src="https://kit.fontawesome.com/23315ae06f.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
   </head>
   <body>
     <div id="app">
-      Hello World
+      <div class="container">
+        <main>
+          <h1 class="header">Custom Alert Notification System</h1>
+          <div class="buttons">
+            <div class="button success" tabindex="0">
+              <p class="title success">Show Success</p>
+            </div>
+            <div class="button warning" tabindex="0">
+              <p class="title warning">Show Warning</p>
+            </div>
+            <div class="button error" tabindex="0">
+              <p class="title error">Show Error</p>
+            </div>
+          </div>
+        </main>
+        <aside class="labels">
+          <div id="success" class="label hidden"><span class="title">Operation completed successfully!</span> <span class="cancel"><i class="fa-solid fa-xmark"></i></span></div>
+          <div id="warning" class="label hidden"><span class="title">Please double-check your input.</span> <span class="cancel"><i class="fa-solid fa-xmark"></i></span></div>
+          <div id="error" class="label hidden"><span class="title">Something went wrong!</span> <span class="cancel"><i class="fa-solid fa-xmark"></i></span></div>
+        </aside>
+      </div>
     </div>
     <script type="module" src="/src/alert.ts"></script>
   </body>

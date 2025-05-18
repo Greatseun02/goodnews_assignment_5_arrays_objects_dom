@@ -1,4 +1,145 @@
-*{
-    background-color: red;
-    color: purple;
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    background: #fff;
+    padding: 40px 20px;
+    flex-direction: row-reverse;
+    height: fit-content;
+    min-height: 500px;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    column-gap: 30px;
+}
+
+#app{
+    align-items: center;
+    padding: 0 20px;
+    min-height: 100vh;
+}
+
+.header{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.button{
+    height: 32px;
+    width: fit-content;
+    border-radius: 4px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button.success, .label#success{
+    background-color: #28a745;
+}
+
+.button.warning, .label#warning{
+    background-color: #ffc107;
+    color: black;
+}
+
+.button.error, .label#error{
+    background-color: #dc3545;
+}
+
+.labels{
+    display: grid;
+    row-gap: 8px;
+}
+
+.label{
+    height: 50px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    user-select: none;
+    max-width: 330px;
+    min-width: 290px;
+}
+
+.cancel{
+    font-size: 12px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+main{
+    display: grid;
+    justify-items: start;
+}
+
+.hidden{
+    display: none;
+}
+
+main{
+    width:  fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:768px) {
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-items: center;
+    }
+
+    .label{
+        width: 100%;
+        max-width: 100%;
+
+    }
+
+    .labels{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    
+
+    main{
+        margin-bottom: auto;
+        display: grid;
+        justify-items: center;
+    }
+
+    
+
+    .header{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 9px;
+        text-align: center;
+    }
+
 }
