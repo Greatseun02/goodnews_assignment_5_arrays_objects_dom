@@ -10,12 +10,13 @@
 }
 #product-listing{
     margin-top: 40px;
+    padding: 0 40px;
 }
 
 #product-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     margin-top: 20px;
     gap: 20px;
     max-width: 720px;
@@ -26,7 +27,6 @@
 
 .product-listing-container{
     display: flex;
-
     justify-content: center;
 }
 
@@ -61,4 +61,28 @@
     cursor: pointer;
     width: fit-content;
     font-size: 10px;
+}
+
+#cart{
+    padding: 0 40px 40px;
+}
+
+.cart-container{
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding: 40px 14px 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#card h2{
+    font-size: 18px;
+    text-align: center;
+}
+
+@media (max-width:540px) {
+    .product-card{
+        width: 100%;
+    }
 }
